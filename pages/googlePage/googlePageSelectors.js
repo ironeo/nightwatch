@@ -1,5 +1,6 @@
 module.exports = {
-    searchInput: '#search',
+    searchInput: 'input.gLFyf.gsfi',
     searchButton: '.FPdoLc .gNO89b',
-    luckySearch: ''
+    luckySearch: '.FPdoLc .RNmpXc',
+    firstResult: '#rso div:nth-of-type(1).bkWMgd .LC20lb'
 }

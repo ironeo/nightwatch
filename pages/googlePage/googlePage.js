@@ -12,12 +12,18 @@ module.exports = function(browser){
 
     this.checkMainPage = (googleSearchButton, googleLuckySearchButton) => {
         return browser
-            .AssertStrictEqual(googlePageSelectors.searchButton, googleSearchButton)
-            //.AssertStrictEqual(googlePageSelectors.luckySearch, googleLuckySearchButton)
-
+        .assert.value(googlePageSelectors.searchButton, googleSearchButton, 'Check search button text')
+        .assert.value(googlePageSelectors.luckySearch, googleLuckySearchButton, 'Check lucky search button text')
     }
      
-    this.goToNewsPage = () => {
+    this.typeSearchTextAndVerifyResults = (searchingText) => {
         return browser
+        .setValue(googlePageSelectors.searchInput, searchingText)
+        .sendKeys(googlePageSelectors.searchInput, browser.Keys.ENTER)
+        .getText(googlePageSelectors.firstResult, function(result) {
+            console.log(result.value)
+            this.assert.strictEqual(result.value, dictionary.searchResult.nightwatchFirstResult); // only when using Selenium / JSONWire
+            
+        })
     }
-}
+    }
