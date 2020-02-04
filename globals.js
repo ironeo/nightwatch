@@ -1,9 +1,4 @@
-module.exports = {
-  // before: function(done) {
-  //   console.log("Setting up...")
-  //   return done()
-  // },
-  
+module.exports = {  
   before: function(done) {
     console.log('Setting up...');
     done()
