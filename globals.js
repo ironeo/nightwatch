@@ -1,4 +1,29 @@
 module.exports = {
+  // before: function(done) {
+  //   console.log("Setting up...")
+  //   return done()
+  // },
+  
+  before: function(done) {
+    console.log('Setting up...');
+    done()
+  },
+
+  after : function(done) {
+    console.log('Closing down...');
+    done()
+  },
+
+  beforeEach : function(done) {
+    console.log('Setting up... beforeEach');
+    done()
+  },
+
+  afterEach : function(done) {
+    console.log('Closing down... afterEach');
+    done()
+  },
+
     getConfig: function (defConfFilePath) {
         return require(this.configurationFilesLocation + defConfFilePath)
       },
