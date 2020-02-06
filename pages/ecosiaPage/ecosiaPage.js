@@ -14,7 +14,7 @@ module.exports = function(browser) {
 
     this.checkFirstResult = (expectedResult) => {
         return browser
-            .assert.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
+            .verify.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
     }
 
     this.goToFirstResultSearch = () => {
