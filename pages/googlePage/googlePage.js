@@ -8,6 +8,7 @@ module.exports = function(browser){
         return browser
             //.url(browser.globals.url())
             .url('https://google.pl')
+            
     }
 
     this.checkMainPage = (googleSearchButton, googleLuckySearchButton) => {
