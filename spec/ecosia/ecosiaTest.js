@@ -1,9 +1,11 @@
+const dictionary = require('./../../dictionary/dictionary_pl')
+
 module.exports = {
     'My first test': function(browser){
         browser
             .page.ecosiaPage().openEcosiaPage()
-            .page.ecosiaPage().setSearchText('nightwatchjs')
-            .page.ecosiaPage().checkFirstResult('Nightwatch.js | Node.js powered End-to-End testing framework')
+            .page.ecosiaPage().setSearchText(dictionary.ecosiaSearchText)
+            .page.ecosiaPage().checkFirstResult(dictionary.nightwatchSearchResult)
         browser.end()
     }
 }
