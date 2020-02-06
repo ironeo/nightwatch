@@ -11,6 +11,11 @@ module.exports = function(browser) {
         return browser
             .CheckUrl(url)
     }
+
+    this.checkUrl_v2 = (url) => {
+        return browser
+            .assert.urlEquals(url)
+    }
     
 }
 
