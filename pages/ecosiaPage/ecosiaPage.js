@@ -11,4 +11,9 @@ module.exports = function(browser) {
             .setValue(ecosiaPageSelectors.ecosiaSearchInput, searchText)
             .click(ecosiaPageSelectors.ecosiaSearchSubmitButton)
     }
+
+    this.checkFirstResult = (expectedResult) => {
+        return browser
+            .assert.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
+    }
 }
