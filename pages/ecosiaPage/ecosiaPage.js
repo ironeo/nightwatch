@@ -16,4 +16,9 @@ module.exports = function(browser) {
         return browser
             .assert.containsText(ecosiaPageSelectors.firstSearchValueResult, expectedResult)
     }
+
+    this.goToFirstResultSearch = () => {
+        return browser
+            .click(ecosiaPageSelectors.firstSearchValueResult)
+    }
 }

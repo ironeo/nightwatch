@@ -17,7 +17,8 @@ module.exports = {
     'custom_assertions_path': '',
     'page_objects_path': [
       'pages/googlePage',
-      'pages/ecosiaPage'
+      'pages/ecosiaPage',
+      'pages/nightwatchjsPage'
     ],
     'globals_path': 'globals.js',
     'selenium': {

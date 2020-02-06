@@ -6,6 +6,8 @@ module.exports = {
             .page.ecosiaPage().openEcosiaPage()
             .page.ecosiaPage().setSearchText(dictionary.ecosiaSearchText)
             .page.ecosiaPage().checkFirstResult(dictionary.nightwatchSearchResult)
+            .page.ecosiaPage().goToFirstResultSearch()
+            .page.nightwatchjsPage().checkMainTitle()
         browser.end()
     }
 }
