@@ -16,7 +16,8 @@ module.exports = {
     'custom_commands_path': 'commands/',
     'custom_assertions_path': '',
     'page_objects_path': [
-      'pages/googlePage'
+      'pages/googlePage',
+      'pages/ecosiaPage'
     ],
     'globals_path': 'globals.js',
     'selenium': {
@@ -51,6 +52,31 @@ module.exports = {
           'acceptSslCerts': true,
           'chromeOptions': {
             'args': ['incognito']
+          }
+        }
+      },
+
+      'headless': {
+        'selenium_port': 4444,
+        'selenium_host': 'localhost',
+        'silent': true,
+        'globals': {
+          'environment': 'pl',
+          'configurationFilesLocation': './configuration/pl/',
+        },
+        'screenshots': {
+          'enabled': true,
+          'path': 'screenshots/',
+          'on_failure': true,
+          'on_error': true
+        },
+        'desiredCapabilities': {
+          'browserName': 'chrome',
+          'marionette': true,
+          'javascriptEnabled': true,
+          'acceptSslCerts': true,
+          'chromeOptions': {
+            'args': ['incognito', 'headless', 'no-sandbox', 'disable-gpu']
           }
         }
       },
