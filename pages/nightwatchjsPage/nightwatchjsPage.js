@@ -9,7 +9,7 @@ module.exports = function(browser) {
 
     this.checkUrl = (url) => {
         return browser
-            .CheckUrl(url)
+            .CheckUrl()
     }
 
     this.checkUrl_v2 = (url) => {
