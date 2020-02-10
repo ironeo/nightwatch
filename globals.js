@@ -1,3 +1,11 @@
+const HtmlReporter = require('nightwatch-html-reporter')
+
+var reporter = new HtmlReporter({
+  openBrowser: false,
+  reportsDirectory: 'reports',
+  separateReportPerSuite: true
+})
+
 module.exports = {  
   before: function(done) {
     console.log('Setting up...');
@@ -33,4 +41,5 @@ module.exports = {
         }  
         
       },
+      reporter: reporter.fn
 }
