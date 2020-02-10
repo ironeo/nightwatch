@@ -52,7 +52,7 @@ module.exports = {
           'javascriptEnabled': true,
           'acceptSslCerts': true,
           'chromeOptions': {
-            'args': ['incognito']
+            'args': ['incognito', 'start-fullscreen']
           }
         }
       },
