@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/ironeo/nightwatchExamplev0.9#readme",
   "dependencies": {
-    "chromedriver": "79.0.0",
+    "chromedriver": "86.0.0",
     "nightwatch": "0.9.21",
     "nightwatch-html-reporter": "2.0.6",
     "selenium-server": "3.141.59"
